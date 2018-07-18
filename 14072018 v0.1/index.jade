@@ -1,0 +1,45 @@
+doctype html
+html(lang="fr")
+  head
+    title= Cybersquare
+    link(rel="stylesheet", href="css/style.css")
+    link(rel='stylesheet', href='css/bootstrap.css')
+    link(rel='stylesheet', href='css/bootstrap-grid.css')
+    link(rel='stylesheet', href='css/animate.css')
+    script(src="js/brunch-config.js")
+    script(src="js/ajax.js")
+    script(src="js/bootstrap.js")
+    script(src="js/jquery-3.3.1.js")
+    script(src="js/typed.js")
+    script(src="js/transition.min.js")
+    script(src="js/popper.js")
+    script(type='text/javascript', src='json/text.json')
+    script(type='text/javascript').
+        
+  body
+    - var texts = ['Acheter les Grades qui vous offrirons une meilleurs visions au niveau des demandes que vous effecturer, Profiter des reductions du sites lors des soldes ...','les','amis','!']
+    - var bottom_link = ['boutique.html']
+    - var bottom_text = ['Boutique']
+    .container-fluid
+        .row
+            .col-md-3.profile
+                //profile users
+                h1.text-center xMimilou 
+            .col-md-9
+                .row                
+                    .col-md-12.d-flex.align-items-center.justify-content-center.heading
+                        h1.title.text-center Cyber-Square
+                    
+                    - for (var i=0; i<6; i++)
+                        .col-md-4.case.col-sm-12 
+                            .row
+                                .col-md-12.top 
+                                    p= texts[i]   
+                            .row
+                                .col-md-12.bottom.d-flex.align-items-center.justify-content-center
+                                    a(href=bottom_link[i])
+                                        button.btn(type='button')= bottom_text[i]
+    //footer
+    .container-fluid
+        .row
+            .col-md-12.footer
